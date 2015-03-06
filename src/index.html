@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="stylesheets/animate.css"/>
+        <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+  </script>
+  </head>
+  <nav class="white">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo indigo-text">SC2</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="sass.html" class="indigo-text">Link</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <div id="main" class="container">
+      <h1 class="header center indigo-text">Starcraft 2 Build Editor</h1>
+      <div class="row">
+        <div class="col m3">
+          <h4 class="header indigo-text">Units</h4>
+          <div class="card-panel teal">
+            <h5 class="white-text">Army Units</h5>
+            <select id="army-select">
+              <option value="" disabled selected>Select</option>
+              <option value="Worker">Worker</option>
+              <option value="Marine">Marine</option>
+              <option value="Reaper">Reaper</option>
+              <option value="Marauder">Marauder</option>
+            </select>
+            <a class="waves-effect waves-light btn indigo" id="add-army">Add</a>
+            <h5 class="white-text">Structures</h5>
+            <select>
+              <option value="" disabled selected>Select</option>
+              <option value="1">Command Center</option>
+              <option value="2">Supply Depot</option>
+              <option value="3">Barracks</option>
+            </select>
+            <a class="waves-effect waves-light btn indigo">Add</a>
+          </div>
+        </div>
+        <div class="col m9">
+          <h4 class="header indigo-text">Build</h4>
+          <div class="card-panel white">
+            <div class="row">
+              <div class="col s12">
+                <div class="col s2">
+                  <h5>Unit</h5>
+                  <div class="divider"></div>
+                  <div id="unit"></div>
+                </div>
+                <div class="col s3">
+                  <h5>Minerals</h5>
+                  <div class="divider"></div>
+                  <div id="mineralCost"></div>
+                </div>
+                <div class="col s2">
+                  <h5>Gas</h5>
+                  <div class="divider"></div>
+                  <div id="gasCost"></div>
+                </div>
+                <div class="col s3">
+                  <h5>Time</h5>
+                  <div class="divider"></div>
+                  <div id="time"></div>
+                </div>
+                <div class="col s2">
+                  <h5>Supply</h5>
+                  <div class="divider"></div>
+                  <div id="supply"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col m12">
+          <h4 class="header indigo-text">Stats</h4>
+          <div class="card-panel indigo stats">
+            <div class="col s4">
+              <h5 class="white-text">Time Elapsed:</h5>
+              <div class="divider"></div>
+              <p id="elapsed" class="white-text"></p>
+            </div>
+            <div class="col s4">
+              <h5 class="white-text">Total Supply</h5>
+              <div class="divider"></div>
+              <p id="total-supply" class="white-text"></p>
+            </div>
+            <div class="col s4">
+              <h5 class="white-text">Resource Collection Rate:</h5>
+              <div class="divider"></div>
+              <p id="rate" class="white-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+  </body>
+</html>
