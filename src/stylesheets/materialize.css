@@ -11259,8 +11259,18 @@ ul.side-nav.full a {
 .stats {
   height: 15%;
 }
+/* line 3, ../sass/components/_custom.scss */
+.stats p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+/* line 8, ../sass/components/_custom.scss */
+.stats h5 {
+  text-align: center;
+}
 
-/* line 4, ../sass/components/_custom.scss */
+/* line 12, ../sass/components/_custom.scss */
 .build {
   height: 350px;
   overflow-y: scroll;
