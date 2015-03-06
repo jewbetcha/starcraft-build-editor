@@ -13,11 +13,11 @@
         selected.push(army[unit]);
 
         // Display units and values on add
-        $('#unit').append('<div class="wow fadeIn">' + unit + '</br>');
+        $('#unit').append(unit + '</br>');
         $('#mineralCost').append(army[unit].cost + '</br>');
 		$('#gasCost').append(army[unit].costGas + '</br>');
         $('#time').append(army[unit].time + '</br>');
-        $('#supply').append(army[unit].supply + '</div></br>');
+        $('#supply').append(army[unit].supply + '</br>');
 
         // Count up stats
         var total_supply = 0;
@@ -29,12 +29,6 @@
             total_time += this.time;
         });
 
-        // if (unit = "Supply Depo"){
-        //     var supply_cap = 10;
-        //     $.each(selected,function() {
-        //         supply += this.supply;
-        //     });
-        // }
 
         $('#total-supply').text(total_supply + "/" );
 
@@ -55,6 +49,29 @@
 
             $('#rate').text(collect_rate + " minerals/game minute");
         }
+
+    });
+
+    // Now for structures
+    var units_structures = '{ "Supply Depot": { "cost": 100, "costGas": 0, "time": 30, "supply": 0} }';
+    var structures = JSON.parse(units_structures);
+    var selected_structure = [];
+
+
+    // Add to build order
+    $('#add-structure').click(function() {
+       var building = $('#structure-select').val();
+        selected_structure.push(structures[building]);
+
+        //display structures on add
+        $('#unit').append(building + '</br>');
+        $('#mineralCost').append(structures[building].cost + '</br>');
+        $('#gasCost').append(structures[building].costGas + '</br>');
+        $('#time').append(structures[building].time + '</br>');
+        $('#supply').append(structures[building].supply + '</br>');
+
+
+
 
     });
 
