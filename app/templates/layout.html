@@ -18,9 +18,12 @@
   <body>
     <div id="main" class="container">
       <h1 class="header center indigo-text">Starcraft 2 Build Editor</h1>
+      {% block race %}
+      {% endblock %}
       <div class="row">
         <div class="col m3">
           <h4 class="header indigo-text">Units</h4>
+
           <div class="card-panel teal">
             <h5 class="white-text">Army Units</h5>
             <select id="army-select">
@@ -34,6 +37,7 @@
               {% endblock %}
             </select>
             <a class="waves-effect waves-light btn indigo" id="add-structure">Add</a>
+            <a class="waves-effect waves-light btn indigo" id="reset">Reset</a>
           </div>
         </div>
         <div class="col m9">

@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% block static %}
-    <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+    		<script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+{% endblock %}
+
+{% block race %}
+<h3 class="header center indigo-text">Terran</h3>
 {% endblock %}
 
 {% block army %}

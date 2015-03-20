@@ -17,11 +17,11 @@
         selected.push(army[unit]);
 
         // Display units and values on add
-        $('#unit').append('<img src="' + army[unit].img + '">' + '</br>');
-        $('#mineralCost').append(army[unit].cost + '</br>');
-		$('#gasCost').append(army[unit].costGas + '</br>');
-        $('#time').append(army[unit].time + '</br>');
-        $('#supply').append(army[unit].supply + '</br>');
+        $('#unit').append('<div class="row"><img src="' + army[unit].img + '">' + '</div>');
+        $('#mineralCost').append('<div class="row">' + army[unit].cost + '</div>');
+		$('#gasCost').append('<div class="row">' + army[unit].costGas + '</div>');
+        $('#time').append('<div class="row">' + army[unit].time + '</div>');
+        $('#supply').append('<div class="row">' + army[unit].supply + '</div>');
 
         // Count up stats
 
@@ -83,7 +83,17 @@
         }
     });
 
+    // reset everything
+    $('#reset').click(function () {
 
+        total_time = 0;
+        $('#elapsed').text(0); 
+        collect_rate = 0;
+        $('#total-supply').text(0 + "/10");
+        total_supply = 0;
+        $('#rate').text(0);
+
+    }) ; 
 
   });
 }(jQuery));
