@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block static %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+{% endblock %}
+
+{% block army %}
+              <option value="" disabled selected>Select</option>
+              <option value="Worker">Worker</option>
+              <option value="Marine">Marine</option>
+              <option value="Reaper">Reaper</option>
+              <option value="Marauder">Marauder</option>
+{% endblock %}
+
+{% block structure %}
+              <option value="" disabled selected>Select</option>
+              <option value="Supply Depot">Supply Depot</option>
+              <option value="Barracks">Barracks</option>
+              <option value="Command Center">Command Center</option>
+              <option value="Factory">Factory</option>
+{% endblock %}

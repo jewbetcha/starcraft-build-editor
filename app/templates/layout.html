@@ -1,12 +1,10 @@
 <html>
   <head>
-    <!--Import materialize.css-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bin/materialize.min.js') }}"></script>
+    {% block static %}
+    {% endblock %}
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/materialize.css') }}"  media="screen,projection"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/animate.css') }}"/>
-        <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
-    <script>
-      new WOW().init();
-  </script>
   </head>
   <nav class="white">
     <div class="nav-wrapper">
@@ -32,11 +30,8 @@
             <a class="waves-effect waves-light btn indigo" id="add-army">Add</a>
             <h5 class="white-text">Structures</h5>
             <select id="structure-select">
-              <option value="" disabled selected>Select</option>
-              <option value="Supply Depot">Supply Depot</option>
-              <option value="Barracks">Barracks</option>
-              <option value="Command Center">Command Center</option>
-              <option value="Factory">Factory</option>
+              {% block structure %}
+              {% endblock %}
             </select>
             <a class="waves-effect waves-light btn indigo" id="add-structure">Add</a>
           </div>
@@ -99,9 +94,5 @@
         </div>
       </div>
     </div>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/bin/materialize.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
   </body>
 </html>
