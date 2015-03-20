@@ -8,7 +8,7 @@
     var supply_cap = 10;
     var collect_rate = 0;
     // Add army units into JSON function as array of arrays
-    var units_army = '{ "Marine": { "cost": 50, "costGas": 0, "time": 25, "supply": 1}, "Reaper": { "cost": 50, "costGas": 50, "time": 40, "supply": 1}, "Marauder": { "cost": 100, "costGas": 25, "time": 30, "supply": 2}, "Worker": { "cost": 50, "costGas": 0, "time": 17, "supply": 1} }';
+    var units_army = '{ "Marine": { "img": "static/img/Marine.png", "cost": 50, "costGas": 0, "time": 25, "supply": 1}, "Reaper": { "img": "static/img/reaper.png", "cost": 50, "costGas": 50, "time": 40, "supply": 1}, "Marauder": { "img": "static/img/marauder.png", "cost": 100, "costGas": 25, "time": 30, "supply": 2}, "Worker": { "img": "static/img/worker.png", "cost": 50, "costGas": 0, "time": 17, "supply": 1} }';
     var army = JSON.parse(units_army);
     var selected = [];
 
@@ -17,7 +17,7 @@
         selected.push(army[unit]);
 
         // Display units and values on add
-        $('#unit').append(unit + '</br>');
+        $('#unit').append('<img src="' + army[unit].img + '">' + '</br>');
         $('#mineralCost').append(army[unit].cost + '</br>');
 		$('#gasCost').append(army[unit].costGas + '</br>');
         $('#time').append(army[unit].time + '</br>');
@@ -57,7 +57,7 @@
     });
 
     // Now for structures
-    var units_structures = '{ "Supply Depot": { "cost": 100, "costGas": 0, "time": 30, "supply": 0}, "Barracks": { "cost": 150, "costGas": 0, "time": 65, "supply": 0} }';
+    var units_structures = '{ "Supply Depot": { "img": "static/img/supply-depot.png", "cost": 100, "costGas": 0, "time": 30, "supply": 0}, "Barracks": { "img": "static/img/barracks.png", "cost": 150, "costGas": 0, "time": 65, "supply": 0} }';
     var structures = JSON.parse(units_structures);
     var selected_structure = [];
 
@@ -68,7 +68,7 @@
         selected_structure.push(structures[building]);
 
         //display structures on add
-        $('#unit').append(building + '</br>');
+        $('#unit').append('<img src="' + structures[building].img + '">' + '</br>');
         $('#mineralCost').append(structures[building].cost + '</br>');
         $('#gasCost').append(structures[building].costGas + '</br>');
         $('#time').append(structures[building].time + '</br>');
